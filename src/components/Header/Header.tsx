@@ -5,14 +5,13 @@ export const Header = () => {
     <Flex
       as="header"
       w="full"
-      bg="#E0DEDC"  
+      bg="gray.800"
       p={4}
-      boxShadow="dark-lg" 
       alignItems="center"
       justifyContent="center"
       
     >
-      <Text fontSize="xl"  fontWeight="bold" color="gray.800">
+      <Text fontSize="xl"   color="white">
         Thierry Bank
       </Text>
     </Flex>
