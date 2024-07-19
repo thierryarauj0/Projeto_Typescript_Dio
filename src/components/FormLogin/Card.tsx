@@ -1,7 +1,7 @@
 // Card.tsx
 import { Box, Center, Input } from "@chakra-ui/react";
-import CustomButton from "./CustomButton"; // Certifique-se de que o caminho está correto
-import { login } from "../../services/login"; // Ajuste o caminho conforme necessário
+import CustomButton from "./CustomButton"; 
+import { login } from "../../services/login"; 
 
 interface CardProps {
   id: number;

@@ -1,7 +1,7 @@
 // CustomButton.test.tsx
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
-import CustomButton from '../components/FormLogin/CustomButton';  // Ajuste o caminho conforme necessário
+import CustomButton from '../components/FormLogin/CustomButton';  
 
 describe('CustomButton', () => {
     it('deve chamar função onClick quando clicado', () => {

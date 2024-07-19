@@ -5,9 +5,9 @@ export const Header = () => {
     <Flex
       as="header"
       w="full"
-      bg="#E0DEDC"  // Cor de fundo combinando com o App
+      bg="#E0DEDC"  
       p={4}
-      boxShadow="dark-lg"  // Sombra leve para um efeito sutil
+      boxShadow="dark-lg" 
       alignItems="center"
       justifyContent="center"
       
