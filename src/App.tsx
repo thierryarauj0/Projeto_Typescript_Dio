@@ -1,7 +1,7 @@
 // App.tsx
 import { ChakraProvider } from "@chakra-ui/react";
-import { Header } from "./components/Header/Header"; // Ajuste o caminho se necessário
-import { Card } from "./components/FormLogin/Card"; // Certifique-se de que o caminho está correto
+import { Header } from "./components/Header/Header"; 
+import { Card } from "./components/FormLogin/Card"; 
 
 function App() {
   return (
