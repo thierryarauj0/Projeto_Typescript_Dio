@@ -5,13 +5,13 @@ import { Layout } from "./components/Layout";
 function App() {
   return (
     <ChakraProvider>
-      <Box minHeight="100vh" backgroundColor="#9413dc" padding='25px'>
-        <Box backgroundColor="white" borderRadius='25px' paddingLeft='15'>
+      <Box minHeight="100vh" backgroundColor="#9413dc" p='25px' display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+        <Box backgroundColor="white" borderRadius='25px' p='15' width="full" maxW="md">
           <Center> 
             <h1>Faça o Login</h1>
-           </Center>
-          <Input placeholder="email" />
-          <Input placeholder="password" />
+          </Center>
+          <Input placeholder="email" mb="4" />
+          <Input placeholder="password" mb="4" />
           <Center>
             <Button colorScheme="green">Entrar</Button>
           </Center>
