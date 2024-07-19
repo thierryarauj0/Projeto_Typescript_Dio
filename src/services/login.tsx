@@ -1,3 +1,4 @@
-export const login = (): void=> {
-    alert('bem vindo')
-}
+// services/login.js
+export const login = (): void => {
+    alert('Bem-vindo!');
+};

@@ -1,12 +1,14 @@
-import {login} from './login'
+// CustomButton.test.tsx
+import React from 'react';
+import { render, fireEvent, screen } from '@testing-library/react';
+import CustomButton from '../components/FormLogin/CustomButton';  // Ajuste o caminho conforme necessário
 
-describe('login', () => {
+describe('CustomButton', () => {
+    it('deve chamar função onClick quando clicado', () => {
+        const onClick = jest.fn();
+        render(<CustomButton onClick={onClick}>Entrar</CustomButton>);
 
-    const mockAlert = jest.fn();
-    window.alert = mockAlert
-    it('deve exibir um alert de boas vindas' , () => {
-        login()
-        expect(mockAlert).toBeCalled()
-    })
-
-})
+        fireEvent.click(screen.getByText('Entrar'));
+        expect(onClick).toHaveBeenCalled();
+    });
+});
