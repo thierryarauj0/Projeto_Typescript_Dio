@@ -11,9 +11,9 @@ function App() {
             <h1>Faça o Login</h1>
           </Center>
           <Input placeholder="email" type="email" mb="4" />
-          <Input placeholder="password"type="password" mb="4" />
+          <Input placeholder="password"type="password" mb="4"  />
           <Center>
-            <Button colorScheme="green">Entrar</Button>
+            <Button colorScheme="green" width='100%'>Entrar</Button>
           </Center>
         </Box>
       </Box>
