@@ -5,8 +5,8 @@ import { Layout } from "./components/Layout";
 function App() {
   return (
     <ChakraProvider>
-      <Box minHeight="100vh" backgroundColor="#9413dc" p='25px' display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-        <Box backgroundColor="white" borderRadius='25px' p='15' width="full" maxW="md">
+      <Box minHeight="100vh" backgroundColor="#f5f1ed" p='25px' display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+        <Box backgroundColor="white" boxShadow="dark-lg"borderRadius='25px' p='15' width="full" maxW="md">
           <Center> 
             <h1>Faça o Login</h1>
           </Center>
