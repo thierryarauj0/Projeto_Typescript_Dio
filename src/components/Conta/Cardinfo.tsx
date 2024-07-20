@@ -1,13 +1,20 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 
-interface ICardinfo{
-    text: string
-}
+interface ICardinfo {
+    mainContent: string,
+    content: string,
+  }
+  
 
-const CardInfo = ({text}: ICardinfo) => {
+const CardInfo = ({mainContent , content}: ICardinfo) => {
   return (
     <Box backgroundColor="#f5f1ed" minHeight="120px" padding={8} >
-      {text}
+      <Text fontSize='2xl' fontWeight={2}>
+        {mainContent}
+      </Text>
+      <Text fontSize='xl'>
+        {content}
+      </Text>
     </Box>
   );
 };
