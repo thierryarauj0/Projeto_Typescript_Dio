@@ -1,14 +1,28 @@
 import { Box, Center, Input } from "@chakra-ui/react";
 import { Footer } from "../components/Footer/Footer";
 import { Card } from "../components/FormLogin/Card";
-import CustomButton from "../components/FormLogin/CustomButton";
 import { login } from "../services/login";
-import { useState } from "react";
-
+import {  useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { AppContext } from "../components/AppContext";
+import CustomButton from "../components/FormLogin/CustomButton";
 
 const Home = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const navigate = useNavigate()
+  const {setIsLoggedIn} = useContext(AppContext)
+
+  const validateUser = async (email:string) => {
+    const loggedIn = await login(email)
+
+    if(!loggedIn){
+      alert('Email Invalido')
+    }
+    setIsLoggedIn(true)
+    navigate("/conta/1")
+  }
+
   return (
     <>
       <Card>
@@ -40,7 +54,7 @@ const Home = () => {
         />
         <Center>
           <CustomButton
-            onClick={() => login(email)}
+            onClick={() => validateUser(email)}
             colorScheme="green"
             width="100%"
           >
