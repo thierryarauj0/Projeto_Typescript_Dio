@@ -1,6 +1,6 @@
 // App.tsx
 import { ChakraProvider } from "@chakra-ui/react";
-import { Layout } from "./components/Layout";
+import { Layout } from "./components/layout/Layout";
 import Home from "../src/pages/home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Conta from "./pages/Conta";
