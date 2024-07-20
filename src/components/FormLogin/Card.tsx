@@ -5,6 +5,7 @@ import { login } from "../../services/login";
 import { useEffect, useState } from "react";
 import {api } from '../../api'
 
+
 interface CardProps {
   id: number;
 }
@@ -28,18 +29,17 @@ export const Card: React.FC<CardProps> = ({ id }) => {
     getData()
   } , [])
 
-// if(userData === null || userData === undefined){
 
-// }
  
   return (
-    <Box minHeight="" backgroundColor="#f5f1ed" p='25px' display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+    <Box minHeight="100vh" backgroundColor="#f5f1ed" p='25px' display="flex" flexDirection="column" justifyContent="center" alignItems="center">
       <Box backgroundColor="white" boxShadow="dark-lg" borderRadius='25px' p='15' width="full" maxW="md">
-        {
+        {/* {
         userData === null || userData === undefined ? 
         <h1>Loading...</h1> :
         <h1>Informaçoes Carregadas:</h1>
-        }        
+        }         */}
+     
         <Center> 
           <h1>Faça o Login</h1>
         </Center>
@@ -53,5 +53,6 @@ export const Card: React.FC<CardProps> = ({ id }) => {
         </Center>
       </Box>
     </Box>
+    
   );
 };

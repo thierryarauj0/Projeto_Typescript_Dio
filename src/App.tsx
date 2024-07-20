@@ -1,21 +1,24 @@
 // App.tsx
 import { ChakraProvider } from "@chakra-ui/react";
-import { Card } from "./components/FormLogin/Card"; 
+
 import { Layout } from "./components/Layout";
-import { useState } from "react";
 
-
+import Home from "../src/pages/home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Conta from "./pages/Conta";
 
 function App() {
-  const [ value , setValue ] = useState(0)
-
-
   return (
-    <ChakraProvider>
-      <Layout>
-      <Card id={1} />
-    </Layout>
-    </ChakraProvider>
+    <BrowserRouter>
+      <ChakraProvider>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/conta" element={<Conta />} />
+          </Routes>
+        </Layout>
+      </ChakraProvider>
+    </BrowserRouter>
   );
 }
 
