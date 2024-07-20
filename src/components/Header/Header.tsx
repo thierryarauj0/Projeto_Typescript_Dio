@@ -1,19 +1,18 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Box, Center,  Text } from "@chakra-ui/react";
 
 export const Header = () => {
+  
+
   return (
-    <Flex
-      as="header"
-      w="full"
-      bg="gray.800"
-      p={4}
-      alignItems="center"
-      justifyContent="center"
-      
-    >
-      <Text fontSize="xl"   color="white">
-        Thierry Bank
-      </Text>
-    </Flex>
+    <Box bg="gray.800">
+      <Center>
+        <Text fontSize="3xl" color="white">
+          Thierry Bank
+        </Text>
+      </Center>
+      {/* <Button borderRadius={0} bg="#f5f1ed">
+        Sair
+      </Button> */}
+    </Box>
   );
 };
