@@ -4,9 +4,11 @@ import { Layout } from "./components/layout/Layout";
 import { BrowserRouter } from "react-router-dom";
 import {  AppContextProvider } from "./components/AppContext";
 import MainRoutes from "../src/routes";
+import { createLocalStorage } from "./services/storage";
 
-const storageLocal = localStorage
-console.log(storageLocal)
+
+  createLocalStorage();
+
 
 function App() {
   return (
