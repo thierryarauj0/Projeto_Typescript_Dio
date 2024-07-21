@@ -14,11 +14,11 @@ const Home = () => {
   const navigate = useNavigate()
   const {setIsLoggedIn} = useContext(AppContext)
 
-  const validateUser = async (email:string) => {
-    const loggedIn = await login(email)
+  const validateUser = async (email:string , password:string) => {
+    const loggedIn = await login(email, password);
 
     if(!loggedIn){
-      return alert('Email Invalido')
+      return alert('Email Invalido e/a senha incorreta')
     }
     setIsLoggedIn(true)
     changeLocalStorage({login: true})
@@ -56,7 +56,7 @@ const Home = () => {
         />
         <Center>
           <CustomButton
-            onClick={() => validateUser(email)}
+            onClick={() => validateUser(email, password)}
             colorScheme="green"
             width="100%"
           >
