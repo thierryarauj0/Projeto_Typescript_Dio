@@ -9,7 +9,7 @@ interface ICardinfo {
 const CardInfo = ({mainContent , content}: ICardinfo) => {
   return (
     <Box backgroundColor="#f5f1ed" minHeight="120px" padding={8} >
-      <Text fontSize='2xl' fontWeight={2}>
+      <Text fontSize='2xl' fontWeight='bold'>
         {mainContent}
       </Text>
       <Text fontSize='xl'>

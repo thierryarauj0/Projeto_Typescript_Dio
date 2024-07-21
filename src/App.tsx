@@ -4,13 +4,17 @@ import { Layout } from "./components/layout/Layout";
 import { BrowserRouter } from "react-router-dom";
 import {  AppContextProvider } from "./components/AppContext";
 import MainRoutes from "../src/routes";
-import { createLocalStorage } from "./services/storage";
+import { createLocalStorage, getAllLocalStorage } from "./services/storage";
 
 
-  createLocalStorage();
 
+ 
 
 function App() {
+
+  !getAllLocalStorage() && createLocalStorage();
+  
+
   return (
     <BrowserRouter>
       <AppContextProvider>

@@ -6,6 +6,7 @@ import {  useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../components/AppContext";
 import CustomButton from "../components/FormLogin/CustomButton";
+import { changeLocalStorage } from "../services/storage";
 
 const Home = () => {
   const [email, setEmail] = useState<string>("");
@@ -20,6 +21,7 @@ const Home = () => {
       return alert('Email Invalido')
     }
     setIsLoggedIn(true)
+    changeLocalStorage({login: true})
     navigate("/conta/1")
   }
 
