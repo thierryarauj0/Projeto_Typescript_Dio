@@ -49,13 +49,11 @@ const Conta = () => {
         ) : (
           <>
             <CardInfo
-              mainContent={`Bem vindo(a) ${userData?.name}`}
-              content={`${actualData.getDay()}/${actualData.getMonth()}/${actualData.getFullYear()} ${actualData.getHours()}:${actualData.getMinutes()}`}
-            />
+                mainContent={`Bem vindo(a) ${userData?.name}`}
+                content={`${actualData.getDay()}/${actualData.getMonth()}/${actualData.getFullYear()} ${actualData.getHours()}:${actualData.getMinutes()}`}            />
             <CardInfo
-              mainContent={"Saldo:"}
-              content={`R$${userData?.balance}`}
-            />
+                mainContent={"Saldo:"}
+                content={`R$${userData?.balance}`}            />
           </>
         )}
       </SimpleGrid>

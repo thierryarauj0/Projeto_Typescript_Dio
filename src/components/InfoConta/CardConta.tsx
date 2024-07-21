@@ -1,19 +1,28 @@
-import { Box, Center, Text } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Box,  Text } from "@chakra-ui/react";
+import {  } from "react-router-dom";
 
-const Cardconta = () => {
-  return (
-    <>
-      <Center padding={20}>
-        <Box>
-          <Text fontSize="3xl">Informaçoes da Conta</Text>
-          <Link to="/conta/1">
-            <Text fontSize="xl">Minha Conta</Text>
-          </Link>
-        </Box>
-      </Center>
-    </>
-  );
-};
+interface ICardConta {
+  mainContent: string;
+  content: string;
+  content1: string;
+}
 
-export default Cardconta;
+  
+  const CardConta = ({mainContent , content , content1}: ICardConta) => {
+    return (
+      <Box backgroundColor="#f5f1ed" minHeight="120px" padding={8} >
+        <Text fontSize='2xl' fontWeight='bold'>
+          {mainContent}
+        </Text>
+        <Text fontSize='xl'>
+          {content}
+        </Text>
+        <Text fontSize='xl'>
+          {content1}
+        </Text>
+      </Box>
+    );
+  };
+
+
+export default CardConta;
