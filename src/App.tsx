@@ -1,11 +1,9 @@
 // App.tsx
 import { ChakraProvider } from "@chakra-ui/react";
 import { Layout } from "./components/layout/Layout";
-import Home from "../src/pages/home";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Conta from "./pages/Conta";
-import ContaInfo from "./pages/ContaInfo";
+import { BrowserRouter } from "react-router-dom";
 import {  AppContextProvider } from "./components/AppContext";
+import MainRoutes from "../src/routes";
 
 
 
@@ -15,11 +13,7 @@ function App() {
       <AppContextProvider>
         <ChakraProvider>
           <Layout>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/conta/:id" element={<Conta />} />
-              <Route path="/infoconta" element={<ContaInfo />} />
-            </Routes>
+            <MainRoutes />
           </Layout>
         </ChakraProvider>
       </AppContextProvider>
