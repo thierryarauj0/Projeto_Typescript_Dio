@@ -6,10 +6,10 @@ const dioBank = {
 
 describe('storage', () => {
     
-    it('Deve retornar o objeto no localStorag', () => {
-        const getItem = jest.spyOn(Storage.prototype, 'getItem')
+    it('Deve retornar o objeto no localStorage com a chave diobank', () => {
+        const MockgetItem = jest.spyOn(Storage.prototype, 'getItem')
         getAllLocalStorage()
-        expect(getItem).toHaveBeenCalled()
+        expect(MockgetItem).toHaveBeenCalledWith('diobank')
     })   
     
     it('Deve criar o objeto no localStorag', () => {
