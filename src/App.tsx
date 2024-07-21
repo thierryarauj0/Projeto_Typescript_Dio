@@ -5,7 +5,8 @@ import { BrowserRouter } from "react-router-dom";
 import {  AppContextProvider } from "./components/AppContext";
 import MainRoutes from "../src/routes";
 
-
+const storageLocal = localStorage
+console.log(storageLocal)
 
 function App() {
   return (
