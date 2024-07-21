@@ -1,17 +1,7 @@
 import { login } from "./login"
 
 
-// jest.mock('react', () => ({
-//     ...jest.requireActual('react'), 
-//     useContext: () => ({
-//         setIsLoggedIn: mockSetIsLoggedIn
-//     })
-// }))
 
-// jest.mock('react-router-dom', () => ({
-//     ...jest.requireActual('react-router-dom'), 
-//     useNavigate: () => mockNavigate
-// }))
 
 
 describe('login', () => {
