@@ -1,11 +1,13 @@
+// services/login.js
 import { api } from "../api";
 
-// services/login.js
-export const login =  async (email: string): Promise<boolean> => {
-   const data: any = await api
+export const login = async (email: string, password: string): Promise<boolean> => {
+    const data: any = await api;
 
-if( email !== data.email){
-    return false
-}
-    return true
+    // Verifica se tanto o email quanto a senha correspondem
+    if (email === data.email && password === data.password) {
+        return true;
+    }
+
+    return false;
 };
